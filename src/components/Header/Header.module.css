@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+
+.links h2 {
+    color: black;
+}
+
+.header div {
+    margin: 0 auto;
+}
+
+.header_body {
+    border: 2px solid darkblue;
+}

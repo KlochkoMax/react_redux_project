@@ -5,14 +5,15 @@
     flex-wrap: wrap;
 }
 
-.links h2 {
-    color: black;
+.header  h2 [class='active'] {
+    text-decoration: underline;
 }
+
+h2 {
+    color: cornsilk;
+}
+
 
 .header div {
     margin: 0 auto;
-}
-
-.header_body {
-    border: 2px solid darkblue;
 }

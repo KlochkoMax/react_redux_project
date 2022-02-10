@@ -1,0 +1,25 @@
+.movies_block{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2%;
+    justify-content: space-around;
+    background-color: #14243a;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    color: cornsilk;
+    gap: 20px;
+    background-color: #14243a;
+}
+
+.pagination button {
+    margin: 5px 35px 20px;
+    font-size: 20px ;
+    cursor: pointer;
+}
+
+.pagination button:hover{
+    color: #5683b0;
+}

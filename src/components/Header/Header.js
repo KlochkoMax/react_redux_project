@@ -10,11 +10,11 @@ const Header = () => {
                     <h2>Site`s name</h2>
                 </div>
 
-                <div className={css.links}>
+                <div>
                     <h2><NavLink to={'/movies'}>Movies</NavLink></h2>
                 </div>
 
-                <div className={css.links}>
+                <div>
                     <h2><NavLink to={'/genres'}>Genres</NavLink></h2>
                 </div>
 

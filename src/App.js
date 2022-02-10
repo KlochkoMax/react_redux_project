@@ -3,7 +3,7 @@ import {Route, Routes} from "react-router-dom";
 import Header from "./components/Header/Header";
 import Movies from "./pages/Movies/Movies";
 import Genres from "./pages/Genres/Genres";
-import Movie from "./components/Movie/Movie";
+import MovieInfo from "./components/MovieInfo/MovieInfo";
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
                     <Route path={'/'} element={<Header/>}>
                         <Route path={'/movies'} element={<Movies/>}></Route>
                         <Route path={'/genres'} element={<Genres/>}></Route>
+                        <Route path={'/movieInfo'} element={<MovieInfo/>}></Route>
                     </Route>
                 </Routes>
             </div>

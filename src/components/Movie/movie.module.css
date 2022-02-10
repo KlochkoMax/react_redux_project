@@ -1,0 +1,31 @@
+.movieBlock {
+    width: 20%;
+    background-color: #065486;
+    max-height:20% ;
+    margin: 15px;
+}
+
+.imgMovieBlock {
+    width: 100%;
+
+}
+
+h4 {
+    color: cornsilk;
+    width: 80%;
+}
+
+h4:nth-child(2){
+    min-height: 100%;
+    width: 20%;
+    background-color: #14243a;
+}
+
+.titleAverage {
+    width: 90%;
+    display: flex;
+    gap: 4%;
+    justify-content: space-between;
+    text-align: center;
+}
+

@@ -1,8 +1,10 @@
 import React from 'react';
-import css from './Header.module.css'
 import {NavLink, Outlet} from "react-router-dom";
 
+import css from './Header.module.css'
+
 const Header = () => {
+
     return (
         <div className={css.header_body}>
             <div className={css.header}>
@@ -11,7 +13,7 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <h2><NavLink to={'/movies'}>Movies</NavLink></h2>
+                    <h2><NavLink to={'/movies'} onClick={window.location.reload}>Movies</NavLink></h2>
                 </div>
 
                 <div>

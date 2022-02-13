@@ -16,12 +16,6 @@ const Movies = () => {
         dispatch(AllMovies(currentPage))
     },[currentPage])
 
-
-
-
-
-
-
     return (
         <div>
             <div className={css.movies_block}>
@@ -34,6 +28,7 @@ const Movies = () => {
             </div>
         </div>
     );
+
 }
 
 export default Movies;

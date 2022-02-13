@@ -1,0 +1,14 @@
+.genresBlock {
+    width: 18%;
+    background-color: #065486;
+    margin-left: 5%  ;
+    color: cornsilk;
+    text-align: left;
+    padding-left: 2%;
+
+}
+
+.genresBody {
+    height: 100%;
+    background-color: #14243a;
+}

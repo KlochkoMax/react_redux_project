@@ -1,0 +1,24 @@
+.aboutMovieBlock {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    background-color: #14243a;
+    color: cornsilk;
+    text-align: left;
+}
+
+.aboutImageVideoBlock{
+    width: 40%;
+}
+
+.aboutMovieInfo{
+    width: 50%;
+}
+
+.aboutImage{
+    width: 60%;
+}
+
+.aboutImageVideoBlock div {
+    margin: 5px;
+}

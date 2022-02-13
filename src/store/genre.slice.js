@@ -7,7 +7,7 @@ let initialState = {
     filmsByGenre:[],
     error: null,
     currentPageForGenre: 1,
-    genreId:null,
+    genreId: null,
 }
 
 export const AllGenres = createAsyncThunk(
@@ -22,11 +22,14 @@ export const AllGenres = createAsyncThunk(
     }
 )
 
-export const FilmByGenre = createAsyncThunk(
-    'genreSlice/FilmByGenre',
+export const ByGenre = createAsyncThunk(
+    'genreSlice/ByGenre',
     async (state,{getState}) =>{
+        let {Genre:{genreId}} = getState(state)
+        console.log(genreId)
         try {
-
+            let filmsByGenre = await genreServices.getMoviesByGenre(genreId)
+            return filmsByGenre
         }catch (e){
 
         }
@@ -36,14 +39,20 @@ export const FilmByGenre = createAsyncThunk(
 let genreSlice = createSlice({
     name: 'genreSlice',
     initialState,
-    reducers:{
-
-        },
+    reducers: {
+        getGenreId: (state, action) => {
+            state.genreId = action.payload
+        }
+    },
 
     extraReducers: {
         [AllGenres.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.genres = action.payload
+        },
+        [ByGenre.fulfilled]:(state,action)=>{
+            state.status = 'fulfilled'
+            state.filmsByGenre = action.payload
         }
 
     }
@@ -51,4 +60,5 @@ let genreSlice = createSlice({
 
 const genreReducer = genreSlice.reducer;
 
+export const {getGenreId} = genreSlice.actions
 export default genreReducer;

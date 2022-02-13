@@ -21,6 +21,7 @@ const Genres = () => {
             <div className={css.genresBlock}>
                 {genres && genres.map(value => <GenreBadge key={value.id} genre={value}/>)}
             </div>
+
             <div>
                 <Outlet/>
             </div>

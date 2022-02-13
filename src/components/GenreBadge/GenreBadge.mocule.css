@@ -1,2 +1,3 @@
-.genreBadge div {
+.genreBadge [class='active'] {
+    text-decoration: underline;
 }

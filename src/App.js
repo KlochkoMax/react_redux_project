@@ -18,9 +18,9 @@ function App() {
                     <Route path={'/'} element={<Header/>}>
                         <Route path={'/movies'} element={<Movies/>}/>
                         <Route path={'/genres'} element={<Genres/>}>
-                            <Route path={'film'} elemenet={<FilmByGenre/>}/>
+                            <Route path={'filmByGenre'} element={<FilmByGenre/>}/>
                         </Route>
-                        <Route path={`/movieInfo/`} element={<MovieInfo/>}></Route>
+                        <Route path={`/movieInfo/`} element={<MovieInfo/>}/>
                     </Route>
                 </Routes>
             </div>

@@ -5,7 +5,6 @@ import Movies from "./pages/Movies/Movies";
 import Genres from "./pages/Genres/Genres";
 import MovieInfo from "./components/MovieInfo/MovieInfo";
 import FilmByGenre from "./components/FilmByGenre/FilmByGenre";
-import Movie from "./components/Movie/Movie";
 import MovieInfoByGenre from "./components/MovieInfoByGenre/MovieInfoByGenre";
 
 function App() {

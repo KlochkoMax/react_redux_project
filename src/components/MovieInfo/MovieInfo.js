@@ -36,7 +36,6 @@ const MovieInfo = () => {
                     <div>Release date : {movieInfo.release_date}</div>
                     <div>Overview : {movieInfo.overview}</div>
                     <div className={css.genre}>Genre: <div style={{display:"flex", gap:"20px"}}>{badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div></div>
-                    <button>Previous page</button>
                 </div>
 
         </div>

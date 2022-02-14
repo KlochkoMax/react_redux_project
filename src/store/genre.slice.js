@@ -14,8 +14,7 @@ let initialState = {
 export const AllGenres = createAsyncThunk(
     'genreSlice/AllGenres',
     async (_)=> {
-        const genres = await genreServices.getGenres();
-        return genres;
+        return await genreServices.getGenres();
     }
 )
 
@@ -23,8 +22,7 @@ export const ByGenre = createAsyncThunk(
     'genreSlice/ByGenre',
     async (state,{getState}) =>{
         let {Genre:{genreId,currentPageForGenre}} = getState(state)
-            let filmsByGenre = await genreServices.getMoviesByGenre(genreId,currentPageForGenre)
-            return filmsByGenre
+        return await genreServices.getMoviesByGenre(genreId, currentPageForGenre)
     }
 )
 

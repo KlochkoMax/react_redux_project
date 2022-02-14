@@ -3,7 +3,7 @@ import css from "./userInfo.module.css"
 
 const UserInfo = () => {
     return (
-        <div className={css.userInfo}>
+        <div>
             <div className={css.avatar}>U</div>
             <div>UserName</div>
         </div>

@@ -2,9 +2,14 @@
     width: 20%;
     margin: 2%;
     background-color: #065486;
+    overflow: hidden;
 }
 
 .imgMovieBlock {
     width: 100%;
+    min-height: 60%;
 }
+
+
+
 

@@ -8,9 +8,9 @@ import Badges from "./Badges/Badges";
 
 const MovieInfo = () => {
 
-
     let {movieInfo, movieId} = useSelector(state => state['Movies']);
 
+    console.log(movieInfo)
 
     let dispatch = useDispatch();
 
@@ -34,6 +34,7 @@ const MovieInfo = () => {
                     <div>Release date : {movieInfo.release_date}</div>
                     <div>Overview : {movieInfo.overview}</div>
                     <div>Genre: {badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div>
+                    <button>Previous page</button>
                 </div>
 
         </div>

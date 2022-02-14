@@ -1,12 +1,10 @@
-import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {movieServices} from "../services/movie.services";
 
 
 const initialState = {
     movies: [],
     movieInfo: {},
-    status: null,
-    error: null,
     currentPage: 1,
     movieId: localStorage.getItem('Page'),
 }
@@ -15,12 +13,9 @@ export const AllMovies = createAsyncThunk(
     'movieSlice/AllMovies',
     async (state, {getState}) => {
         let {Movies: {currentPage}} = getState(state)
-        try {
             const movies = await movieServices.getAllMovies(currentPage);
             return movies;
-        } catch (e) {
 
-        }
     }
 )
 
@@ -28,12 +23,8 @@ export const MovieDetails = createAsyncThunk(
     'movieSlice/MovieDetails',
     async (state, {getState}) => {
         let {Movies: {movieId}} = getState(state)
-        try {
-            const movieInfo = await movieServices.getMovieInfo(movieId);
-            return movieInfo
-        } catch (e) {
+        return await movieServices.getMovieInfo(movieId)
 
-        }
     }
 )
 
@@ -58,17 +49,9 @@ let movieSlice = createSlice({
 
     },
     extraReducers:{
-        [AllMovies.pending]:(state)=>{
-            state.status = 'pending'
-            state.error = null
-        },
         [AllMovies.fulfilled]:(state,action)=>{
             state.status = 'fulfilled'
             state.movies = action.payload
-        },
-        [MovieDetails.pending]:(state)=>{
-            state.status = 'pending'
-            state.error = null
         },
         [MovieDetails.fulfilled]:(state,action)=>{
             state.status = 'fulfilled'

@@ -9,7 +9,7 @@ const Header = () => {
         <div className={css.header_body}>
             <div className={css.header}>
                 <div>
-                    <h2>Site`s name</h2>
+                    <h2><NavLink to={'/'}>Home</NavLink></h2>
                 </div>
 
                 <div>
@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <h2><NavLink to={'/genres'}>Genres</NavLink></h2>
+                    <h2><NavLink to={'/genres'} onClick={window.location.reload}>Genres</NavLink></h2>
                 </div>
 
                 <div>

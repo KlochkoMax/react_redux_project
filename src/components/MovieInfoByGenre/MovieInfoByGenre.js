@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {MovieDetailsGenreBlock} from "../../store/genre.slice";
 import css from "../MovieInfo/movieInfo.module.css";
 import Badges from "../MovieInfo/Badges/Badges";
+import Star from "react-star-ratings/build/star";
+import Stars from "../StarsRating/Stars";
 
 const MovieInfoByGenre = () => {
 
@@ -26,6 +28,7 @@ const MovieInfoByGenre = () => {
             </div>
 
             <div>
+                {<Stars/>}
                 <div>Original title : {title}</div>
                 <div>Vote average: {vote_average}</div>
                 <div>Overview : {overview}</div>

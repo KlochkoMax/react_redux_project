@@ -5,6 +5,7 @@ import {MovieDetails} from "../../store/movie.slice";
 import css from "./movieInfo.module.css"
 import Movies from "../../pages/Movies/Movies";
 import Badges from "./Badges/Badges";
+import Stars from "../StarsRating/Stars";
 
 const MovieInfo = () => {
 
@@ -30,6 +31,7 @@ const MovieInfo = () => {
                 </div>
 
                 <div className={css.aboutMovieInfo}>
+                    {<Stars/>}
                     <div>Original title : {movieInfo.original_title}</div>
                     <div>Release date : {movieInfo.release_date}</div>
                     <div>Overview : {movieInfo.overview}</div>

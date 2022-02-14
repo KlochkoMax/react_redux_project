@@ -18,7 +18,7 @@ const FilmByGenre = () => {
     return (
         <div className={css.filmByGenreBlock}>
             {results && results.map(value => <FilmListbyGenre key ={value.id} movie={value}/>)}
-            <div>
+            <div className={css.button}>
                 <button onClick={()=>dispatch(PrevPage())}><h2>Previous page</h2></button>
                 <button><h2>{currentPageForGenre}</h2></button>
                 <button onClick={()=>dispatch(NextPage())}><h2>Next page</h2></button>

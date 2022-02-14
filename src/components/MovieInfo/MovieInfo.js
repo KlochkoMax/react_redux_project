@@ -26,7 +26,7 @@ const MovieInfo = () => {
     return (
         <div className={css.aboutMovieBlock}>
 
-                <div className={css.aboutImageVideoBlock}>
+                <div className={css.aboutImageBlock}>
                     <img className={css.aboutImage} src={`https://image.tmdb.org/t/p/w500${movieInfo.poster_path}`} alt={"poster"}/>
                 </div>
 
@@ -35,7 +35,7 @@ const MovieInfo = () => {
                     <div>Original title : {movieInfo.original_title}</div>
                     <div>Release date : {movieInfo.release_date}</div>
                     <div>Overview : {movieInfo.overview}</div>
-                    <div>Genre: {badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div>
+                    <div className={css.genre}>Genre: <div style={{display:"flex", gap:"20px"}}>{badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div></div>
                     <button>Previous page</button>
                 </div>
 

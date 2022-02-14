@@ -2,6 +2,7 @@ import React from 'react';
 import {NavLink, Outlet} from "react-router-dom";
 
 import css from './Header.module.css'
+import UserInfo from "../UserInfo/UserInfo";
 
 const Header = () => {
 
@@ -21,7 +22,7 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <h2>Login</h2>
+                    <h2 className={css.user}><UserInfo/></h2>
                 </div>
 
             </div>

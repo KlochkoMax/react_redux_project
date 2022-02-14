@@ -28,6 +28,10 @@ function App() {
                 </Routes>
             </div>
 
+            <div className="Footer">
+                  <spun>Developed by Max Klochko</spun>
+            </div>
+
         </div>
     </div>
   );

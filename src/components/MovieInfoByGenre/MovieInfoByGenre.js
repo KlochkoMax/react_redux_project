@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
+
 import {MovieDetailsGenreBlock} from "../../store/genre.slice";
-import css from "../MovieInfo/movieInfo.module.css";
 import Badges from "../MovieInfo/Badges/Badges";
-import Star from "react-star-ratings/build/star";
 import Stars from "../StarsRating/Stars";
+import css from "./movieInfoByGenre.module.css"
 
 const MovieInfoByGenre = () => {
 
@@ -21,19 +21,20 @@ const MovieInfoByGenre = () => {
     },[movieId])
 
     return (
-        <div>
+        <div className={css.movieByGenreBlock}>
 
-            <div>
+            <div className={css.imgBlock}>
                 <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={"poster"}/>
             </div>
 
-            <div>
+            <div className={css.movieByGenreDetails}>
+                <ul>
                 {<Stars/>}
                 <div>Original title : {title}</div>
                 <div>Vote average: {vote_average}</div>
+                <div className={css.genre}>Genre: {badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div>
                 <div>Overview : {overview}</div>
-                <div>Genre: {badges && badges.map(value => <Badges key={value.id}  badges={value}/>)}</div>
-                <button>Previous page</button>
+                </ul>
             </div>
 
         </div>

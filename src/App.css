@@ -19,6 +19,14 @@ button {
   border: none;
 }
 
+.Footer{
+  min-height: 40px;
+  color: cornsilk;
+  text-align: right;
+  font-weight: bold;
+  margin: 1%;
+}
+
 
 
 
